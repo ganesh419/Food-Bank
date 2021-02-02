@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '3.27.0'
+project:
+    name: Return
+    package:
+        name: Food-Bank
+        api_version: 'Return'
+    git:
+        default_branch: 'Return'
+        prefix_feature: 'Return'
+        prefix_beta: 'Return'
+        prefix_release: 'Return'
+    test:
+        name_match: 'Return'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Return/tests
+            options:
+                outputdir: robot/Return/results
+
+    robot_testdoc:
+        options:
+            path: robot/Return/tests
+            output: robot/Return/doc/Return_tests.html
+
